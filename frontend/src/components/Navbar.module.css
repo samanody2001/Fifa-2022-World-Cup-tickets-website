@@ -1,0 +1,50 @@
+.nav {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 20px 25px -5px rgb(26, 25, 25), 0 10px 10px -5px rgb(36, 36, 36);
+  background-color: transparent;
+  position: relative;
+}
+
+.nav_content {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_img {
+  cursor: pointer;
+}
+
+.go_home {
+  padding: 0.4em 1em;
+  color: rgb(195, 195, 195);
+  border-bottom: solid 1px grey;
+  text-decoration: none;
+}
+
+.email {
+  text-transform: capitalize;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 1px solid grey;
+  border-radius: 30px;
+  padding: 0.2em 0.5em;
+  background-color: rgb(29, 29, 29);
+  cursor: pointer;
+}
+
+.showLogout {
+  position: absolute;
+  right: 5%;
+  top: 7vh;
+  z-index: 2;
+  background-color: rgb(43, 43, 43);
+  padding: 1em 1.5em;
+  border: solid 1px rgb(61, 61, 61);
+  cursor: pointer;
+}

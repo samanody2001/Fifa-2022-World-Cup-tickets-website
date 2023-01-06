@@ -1,0 +1,10 @@
+.tickets {
+  display: grid;
+  grid-gap: 1em;
+}
+
+@media (min-width: 850px) {
+  .tickets {
+    grid-template-columns: 1fr 1fr;
+  }
+}

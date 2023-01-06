@@ -1,0 +1,21 @@
+.single_ticket {
+  background-color: #212123;
+  padding: 2em 2em;
+}
+
+.single_ticket_info {
+  margin: 0;
+  font-size: 0.8rem;
+  margin-bottom: 2.75rem;
+  color: rgb(4, 151, 4);
+}
+
+.single_ticket_title {
+  margin: 0;
+}
+
+.btn {
+  padding: 0.5rem 1.5rem;
+  background-color: #0a4313;
+  font-weight: 400;
+}

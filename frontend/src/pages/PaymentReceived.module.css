@@ -1,0 +1,14 @@
+.container {
+  width: 90%;
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 2em;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.85);
+  margin-top: 20vh;
+}
+
+.title {
+  border-bottom: rgb(71, 71, 71) solid 1px;
+  padding-bottom: 0.35em;
+}

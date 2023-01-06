@@ -1,0 +1,61 @@
+.container {
+  width: 90%;
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 2em;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.85);
+  position: relative;
+}
+
+.content {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container > h3 {
+  border-bottom: rgb(71, 71, 71) solid 1px;
+  padding-bottom: 0.35em;
+}
+
+.payBtn {
+  margin-top: 2em;
+}
+
+.order {
+  background-color: #151515;
+  padding: 1em;
+}
+
+.order > p {
+  margin: 0;
+}
+
+.order_details {
+  font-size: 0.75;
+  color: rgb(152, 151, 151);
+}
+
+.order_title {
+  margin-bottom: 0.5em;
+}
+
+.order_amount {
+  color: rgb(3, 203, 3);
+  font-weight: bold;
+}
+
+.error {
+  margin-top: 1em;
+}
+
+.cancel {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  cursor: pointer;
+}
