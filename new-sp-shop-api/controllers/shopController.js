@@ -54,6 +54,7 @@ const updateProducts = (req, res) => {
     throw new BadRequestError("Kindly provide all necessary values");
   }
 
+  console.log(req.body);
   for (let item of list) {
     if (item.matchNumber === matchNumber) {
       const category = "category" + tickets.category;
@@ -63,14 +64,19 @@ const updateProducts = (req, res) => {
         action === "TICKET_PENDING" &&
         currentItem.available >= tickets.quantity
       ) {
+        console.log("pending");
         currentItem.pending += tickets.quantity;
         currentItem.available -= tickets.quantity;
       } else if (
         action === "TICKET_RESERVED" &&
         currentItem.pending >= tickets.quantity
       ) {
+        console.log("reserved");
         currentItem.pending = currentItem.pending - tickets.quantity;
-      } else {
+      } else if (
+        action === "TICKET_CANCELLED" &&
+        currentItem.pending >= tickets.quantity
+      ) {
         currentItem.pending = currentItem.pending - tickets.quantity;
         currentItem.available = currentItem.available + tickets.quantity;
       }

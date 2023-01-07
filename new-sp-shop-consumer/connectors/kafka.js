@@ -75,7 +75,7 @@ const startKafkaConsumer = async () => {
           console.log(reqData);
           try {
             const result = await axios.patch(
-              `https://sp-shop-api.vercel.app/api/v1/shop/updateProduct`,
+              `http://localhost:5000/api/v1/shop/updateProduct`,
               reqData
             );
             console.log(result.data);

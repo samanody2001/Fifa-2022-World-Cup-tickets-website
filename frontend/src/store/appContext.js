@@ -27,7 +27,7 @@ const initialState = {
 
 const AppContext = createContext(initialState);
 
-const baseUrl = "https://sp-shop-api.vercel.app/api/v1";
+const baseUrl = "/api/v1";
 
 const AppProvider = ({ children }) => {
   const [state, setState] = useState(initialState);
@@ -110,7 +110,7 @@ const AppProvider = ({ children }) => {
             ...state.orderDetails.tickets,
             [name]: value,
           },
-          userId: null,
+          userId: JSON.parse(localStorage.getItem("userId")) || null,
         },
       }));
     }

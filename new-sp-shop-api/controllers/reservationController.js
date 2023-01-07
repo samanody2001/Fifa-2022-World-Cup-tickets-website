@@ -57,7 +57,7 @@ const reservationController = async (req, res) => {
   const validationError = validateTicketReservationDto(customBody);
   if (validationError) {
     console.log(validationError);
-    throw new BadRequestError("data validation error");
+    throw new BadRequestError("Ticket quantity must not be more than 2");
   }
   console.log("validation successful");
 

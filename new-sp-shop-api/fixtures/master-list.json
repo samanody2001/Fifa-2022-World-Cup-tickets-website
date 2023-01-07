@@ -68,7 +68,7 @@
                 "price": 125
             },
             "category3": {
-                "available": 20,
+                "available": 18,
                 "pending": 0,
                 "price": 195
             }
@@ -302,8 +302,8 @@
                 "price": 125
             },
             "category3": {
-                "available": 20,
-                "pending": 0,
+                "available": 22,
+                "pending": -2,
                 "price": 195
             }
         },
@@ -1207,8 +1207,8 @@
                 "price": 75
             },
             "category2": {
-                "available": 20,
-                "pending": 0,
+                "available": 18,
+                "pending": 2,
                 "price": 125
             },
             "category3": {

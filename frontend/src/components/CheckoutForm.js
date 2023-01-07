@@ -65,7 +65,7 @@ export default function CheckoutForm({ classes }) {
       confirmParams: {
         // Make sure to change this to your payment completion page
         return_url:
-          "https://ticket-sales-frontend.vercel.app/paymentReceived",
+          "http://localhost:3000/paymentReceived",
       },
     });
 

@@ -25,6 +25,7 @@ const checkout = async (req, res) => {
   const list = masterList;
 
   if (!tickets || !matchNumber || !userId) {
+    console.log(req.body);
     throw new BadRequestError("Kindly include all necessities to proceed");
   }
 
@@ -42,11 +43,10 @@ const checkout = async (req, res) => {
   }
 
   //check if item quantity required is available
-  const qtyAvailable = itemToBuy.availability[tickets.category].count;
+  const qtyAvailable = itemToBuy.availability[tickets.category].available;
   if (qtyAvailable < tickets.quantity) {
-    throw new BadRequestErrortickets.quantity(
-      "Quantity needed exceeds quantity available"
-    );
+    console.log("here");
+    throw new BadRequestError("Quantity needed exceeds quantity available");
   }
 
   const totalOrderAmount = price * tickets.quantity * 100;
@@ -167,7 +167,7 @@ const confirmPayment = async (req, res) => {
 
   if (event.type === "charge.failed") {
     if (order) {
-      console.log("order failed started")
+      console.log("order failed started");
       try {
         // Send cancellation message indicating ticket sale failed
         await sendKafkaMessage(messagesType.TICKET_CANCELLED, {
@@ -179,7 +179,7 @@ const confirmPayment = async (req, res) => {
         });
         orderFailed.status = "cancelled";
         await orderFailed.save();
-        console.log("sending cancellation message suceeded")
+        console.log("sending cancellation message suceeded");
       } catch (error) {
         throw new BadRequestError("Sending message failed");
       }

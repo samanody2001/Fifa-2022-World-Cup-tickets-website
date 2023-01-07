@@ -31,15 +31,15 @@ const Checkout = () => {
     renderOnce.current = true;
     const getClientSecret = async () => {
       try {
-        const { data } = await axios.post(
-          "https://sp-shop-api.vercel.app/api/v1/reservation",
-          {
-            ...orderDetails,
-          }
-        );
+        console.log(orderDetails);
+        const { data } = await axios.post("/api/v1/reservation", {
+          ...orderDetails,
+        });
+        console.log(data);
         setOrderDetails("totalOrderAmount", data.totalOrderAmount / 100);
         setClientSecret(data.clientSecret);
       } catch (error) {
+        console.log(error);
         const msg =
           error.response.data.msg || "Something went wrong. Try again later";
         invalidInput(msg);
